@@ -12,3 +12,4 @@ A = g ** a % p
 sock.send(pickle.dumps((p, g, A)))
 
 sock.close()
+

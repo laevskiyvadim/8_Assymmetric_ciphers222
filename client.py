@@ -17,4 +17,11 @@ B = pickle.loads(msg)
 K = B ** a % p
 print("K =", K)
 
+message = input()
+bits = list(map(ord, list(message)))
+bits = [i+K for i in bits]
+
+message = ' '.join(list(map(str, bits)))
+sock.send(message.encode())
+
 sock.close()
